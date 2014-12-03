@@ -1,0 +1,14 @@
+<form method="post" action="/add">
+  <input type='text' name='url' placeholder="Enter url" >
+  <button type="submit">Submit</button>
+</form>
+
+<ul>
+  <% @urls.each do |url| %>
+    <li><%= url.id %> - <a href='<%= url.url %>'><%= url.url %></a>
+      <form method="post" action="/delete"> 
+        
+      </form>
+    </li>
+  <% end %>
+</ul>
